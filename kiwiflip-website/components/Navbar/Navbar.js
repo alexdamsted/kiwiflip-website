@@ -5,7 +5,10 @@ import {
   Nav,
   NavbarContainer,
   NavIcon,
+  NavItem,
+  NavLinks,
   NavLogo,
+  NavMenu,
 } from "./Navbar.elements";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -23,6 +26,18 @@ const Navbar = () => {
         <MobileIcon onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}
         </MobileIcon>
+        <NavMenu onClick={handleClick} click={click}>
+          <NavItem>
+            <Link href="/">
+              <NavLinks>Home</NavLinks>
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link href="/">
+              <NavLinks>Download App</NavLinks>
+            </Link>
+          </NavItem>
+        </NavMenu>
       </NavbarContainer>
     </Nav>
   );
