@@ -4,8 +4,11 @@ import {
   MobileIcon,
   Nav,
   NavbarContainer,
+  NavButton,
+  NavButtonLink,
   NavIcon,
   NavItem,
+  NavItemButton,
   NavLinks,
   NavLogo,
   NavMenu,
@@ -29,14 +32,14 @@ const Navbar = () => {
         <NavMenu onClick={handleClick} click={click}>
           <NavItem>
             <Link href="/">
-              <NavLinks>Home</NavLinks>
+              <NavLinks>Sign Up</NavLinks>
             </Link>
           </NavItem>
-          <NavItem>
-            <Link href="/">
-              <NavLinks>Download App</NavLinks>
-            </Link>
-          </NavItem>
+          <NavItemButton>
+            <NavButtonLink>
+              <NavButton>Download App</NavButton>
+            </NavButtonLink>
+          </NavItemButton>
         </NavMenu>
       </NavbarContainer>
     </Nav>
