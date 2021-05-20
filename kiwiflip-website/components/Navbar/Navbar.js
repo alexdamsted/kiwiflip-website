@@ -24,8 +24,8 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo>
-          <NavIcon />
           <NavTitle>Kiwiflip</NavTitle>
+          {/* <NavIcon /> */}
         </NavLogo>
         <MobileIcon onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}
