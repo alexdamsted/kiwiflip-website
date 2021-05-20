@@ -35,6 +35,11 @@ export const NavLogo = styled.a`
 
 export const NavIcon = styled(FaKiwiBird)`
   margin-right: 0.5rem;
+  color: #191919;
+`;
+
+export const NavTitle = styled.p`
+  color: #74c947;
 `;
 
 export const MobileIcon = styled.div`

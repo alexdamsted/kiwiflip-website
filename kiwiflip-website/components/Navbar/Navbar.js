@@ -12,6 +12,7 @@ import {
   NavLinks,
   NavLogo,
   NavMenu,
+  NavTitle,
 } from "./Navbar.elements";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -24,7 +25,7 @@ const Navbar = () => {
       <NavbarContainer>
         <NavLogo>
           <NavIcon />
-          Kiwiflip
+          <NavTitle>Kiwiflip</NavTitle>
         </NavLogo>
         <MobileIcon onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}
