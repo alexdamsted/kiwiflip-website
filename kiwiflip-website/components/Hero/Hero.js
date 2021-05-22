@@ -1,12 +1,19 @@
 import React from "react";
-import Video from "../../public/video.mp4";
 import { HeroBg, HeroContainer, VideoBg } from "./Hero.elements";
 
-const Hero = () => {
+const Hero = ({ video }) => {
+  const { heroVideo } = video.fields;
+
   return (
     <HeroContainer>
       <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        <VideoBg
+          autoPlay
+          loop
+          muted
+          src={"https:" + heroVideo.fields.file.url}
+          type={heroVideo.fields.file.contentType}
+        />
       </HeroBg>
     </HeroContainer>
   );
