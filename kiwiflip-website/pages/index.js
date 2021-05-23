@@ -21,12 +21,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ hero }) {
+  console.log(hero);
   return (
     <>
       <GlobalStyle />
       <Navbar />
       {hero.map((hero) => (
-        <Hero key={hero.sys.id} video={hero} />
+        <Hero key={hero.sys.id} items={hero} />
       ))}
     </>
   );

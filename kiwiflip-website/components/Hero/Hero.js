@@ -1,8 +1,18 @@
 import React from "react";
-import { HeroBg, HeroContainer, VideoBg } from "./Hero.elements";
+import {
+  HeroBg,
+  HeroButton,
+  HeroButtonWrapper,
+  HeroContainer,
+  HeroContent,
+  HeroH1,
+  HeroP,
+  VideoBg,
+} from "./Hero.elements";
 
-const Hero = ({ video }) => {
-  const { heroVideo } = video.fields;
+const Hero = ({ items }) => {
+  const { heroVideo, heroHeading, heroParagraph, heroButtonText } =
+    items.fields;
 
   return (
     <HeroContainer>
@@ -15,6 +25,13 @@ const Hero = ({ video }) => {
           type={heroVideo.fields.file.contentType}
         />
       </HeroBg>
+      <HeroContent>
+        <HeroH1>{heroHeading}</HeroH1>
+        <HeroP>{heroParagraph}</HeroP>
+        <HeroButtonWrapper>
+          <HeroButton>{heroButtonText}</HeroButton>
+        </HeroButtonWrapper>
+      </HeroContent>
     </HeroContainer>
   );
 };
