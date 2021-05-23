@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
+import Body from "../components/Body/Body";
 import { createClient } from "contentful";
 import GlobalStyle from "../styles/globals";
 
@@ -25,13 +25,16 @@ export async function getStaticProps() {
 }
 
 export default function Home({ hero, body, footer }) {
-  console.log(hero, body, footer);
+  console.log(hero, body);
   return (
     <>
       <GlobalStyle />
       <Navbar />
       {hero.map((hero) => (
         <Hero key={hero.sys.id} items={hero} />
+      ))}
+      {body.map((body) => (
+        <Body key={body.sys.id} items={body} />
       ))}
     </>
   );
