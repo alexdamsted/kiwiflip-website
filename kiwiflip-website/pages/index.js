@@ -11,17 +11,21 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESSKEY,
   });
 
-  const res = await client.getEntries({ content_type: "hero" });
+  const heroRes = await client.getEntries({ content_type: "hero" });
+  const bodyRes = await client.getEntries({ content_type: "body" });
+  const footerRes = await client.getEntries({ content_type: "footer" });
 
   return {
     props: {
-      hero: res.items,
+      hero: heroRes.items,
+      body: bodyRes.items,
+      footer: footerRes.items,
     },
   };
 }
 
-export default function Home({ hero }) {
-  console.log(hero);
+export default function Home({ hero, body, footer }) {
+  console.log(hero, body, footer);
   return (
     <>
       <GlobalStyle />
