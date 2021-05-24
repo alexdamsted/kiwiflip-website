@@ -18,6 +18,7 @@ export const BodyWrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
+  padding-bottom: 300px;
   justify-content: center;
 `;
 
@@ -55,7 +56,7 @@ export const TextWrapper = styled.div`
   padding-bottom: 60px;
 
   @media screen and (max-width: 480px) {
-    margin-top: -600px;
+    margin-top: -450px;
   }
 `;
 
