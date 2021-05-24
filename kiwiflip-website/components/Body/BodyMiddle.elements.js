@@ -12,7 +12,7 @@ export const BodyContainer = styled.div`
 export const BodyWrapper = styled.div`
   display: flex;
   z-index: 1;
-  height: 860px;
+  height: 700px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;

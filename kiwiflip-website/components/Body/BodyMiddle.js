@@ -12,7 +12,7 @@ import {
   ImgWrap,
   Subtitle,
   TextWrapper,
-} from "./BodyTop.elements";
+} from "./BodyMiddle.elements";
 
 const BodyMiddle = ({ items }) => {
   const { heading, paragraph, image } = items.fields;
