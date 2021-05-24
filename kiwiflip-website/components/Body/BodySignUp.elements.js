@@ -19,6 +19,10 @@ export const BodyWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
+  @media screen and (max-width: 480px) {
+    padding-top: 150px;
+  }
 `;
 
 export const Col1Row = styled.div`
@@ -118,7 +122,6 @@ export const BodySignUpButton = styled.button`
 
   @media screen and (max-width: 960px) {
     padding: 12px 64px;
-    font-size: 0.8rem;
     width: 100%;
   }
 `;
