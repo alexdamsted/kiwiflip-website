@@ -34,6 +34,8 @@ export const Col2Row = styled.div`
   align-items: center;
   order: 1;
   @media screen and (max-width: 768px) {
+    position: absolute;
+    margin-top: 350px;
   }
 `;
 
@@ -53,6 +55,10 @@ export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: -400px;
+  }
 `;
 
 export const Heading = styled.h1`
