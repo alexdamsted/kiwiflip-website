@@ -24,6 +24,7 @@ export const BodyWrapper = styled.div`
 export const Col1Row = styled.div`
   display: flex;
   align-items: center;
+  order: 2;
   @media screen and (max-width: 768px) {
   }
 `;
@@ -31,6 +32,7 @@ export const Col1Row = styled.div`
 export const Col2Row = styled.div`
   display: flex;
   align-items: center;
+  order: 1;
   @media screen and (max-width: 768px) {
   }
 `;
