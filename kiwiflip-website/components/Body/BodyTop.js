@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import {
   BodyContainer,
-  BodyRow,
+  Col1Row,
+  Col2Row,
   BodyWrapper,
   Column1,
   Column2,
@@ -11,34 +12,36 @@ import {
   ImgWrap,
   Subtitle,
   TextWrapper,
-} from "./Body.elements";
+} from "./BodyTop.elements";
 
-const Body = ({ items }) => {
+const BodyTop = ({ items }) => {
   const { bodyHeading, bodyParagraph, image } = items.fields;
 
   return (
     <BodyContainer>
       <BodyWrapper>
-        <BodyRow>
+        <Col1Row>
           <Column1>
             <TextWrapper>
-              <Heading>Heading</Heading>
-              <Subtitle>Subtitle</Subtitle>
+              <Heading>{bodyHeading}</Heading>
+              <Subtitle>{bodyParagraph}</Subtitle>
             </TextWrapper>
           </Column1>
+        </Col1Row>
+        <Col2Row>
           <Column2>
             <ImgWrap>
               <Image
-                src={"https:" + image[0].fields.file.url}
-                width={image[0].fields.file.details.image.width}
-                height={image[0].fields.file.details.image.height}
+                src={"https:" + image.fields.file.url}
+                width={image.fields.file.details.image.width}
+                height={image.fields.file.details.image.height}
               />
             </ImgWrap>
           </Column2>
-        </BodyRow>
+        </Col2Row>
       </BodyWrapper>
     </BodyContainer>
   );
 };
 
-export default Body;
+export default BodyTop;

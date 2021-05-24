@@ -10,7 +10,7 @@ export const BodyContainer = styled.div`
 `;
 
 export const BodyWrapper = styled.div`
-  display: grid;
+  display: flex;
   z-index: 1;
   height: 860px;
   width: 100%;
@@ -21,14 +21,17 @@ export const BodyWrapper = styled.div`
   justify-content: center;
 `;
 
-export const BodyRow = styled.div`
-  display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
+export const Col1Row = styled.div`
+  display: flex;
   align-items: center;
-  grid-template-areas: "col2 col1";
-
   @media screen and (max-width: 768px) {
-    grid-template-areas: "col1" "col2";
+  }
+`;
+
+export const Col2Row = styled.div`
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
   }
 `;
 
@@ -55,7 +58,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.1;
   font-weight: 600;
-  color: white;
+  color: #191919;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;

@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
-import Body from "../components/Body/Body";
+import BodyTop from "../components/Body/BodyTop";
+import BodyMiddle from "../components/Body/BodyMiddle";
 import { createClient } from "contentful";
 import GlobalStyle from "../styles/globals";
 
@@ -12,20 +13,22 @@ export async function getStaticProps() {
   });
 
   const heroRes = await client.getEntries({ content_type: "hero" });
-  const bodyRes = await client.getEntries({ content_type: "body" });
+  const bodyTopRes = await client.getEntries({ content_type: "body" });
+  const bodyMiddleRes = await client.getEntries({ content_type: "bodyMiddle" });
   const footerRes = await client.getEntries({ content_type: "footer" });
 
   return {
     props: {
       hero: heroRes.items,
-      body: bodyRes.items,
+      bodyTop: bodyTopRes.items,
+      bodyMiddle: bodyMiddleRes.items,
       footer: footerRes.items,
     },
   };
 }
 
-export default function Home({ hero, body, footer }) {
-  console.log(hero, body);
+export default function Home({ hero, bodyTop, bodyMiddle, footer }) {
+  console.log(bodyMiddle);
   return (
     <>
       <GlobalStyle />
@@ -33,8 +36,11 @@ export default function Home({ hero, body, footer }) {
       {hero.map((hero) => (
         <Hero key={hero.sys.id} items={hero} />
       ))}
-      {body.map((body) => (
-        <Body key={body.sys.id} items={body} />
+      {bodyTop.map((bodyTop) => (
+        <BodyTop key={bodyTop.sys.id} items={bodyTop} />
+      ))}
+      {bodyMiddle.map((bodyMiddle) => (
+        <BodyMiddle key={bodyMiddle.sys.id} items={bodyMiddle} />
       ))}
     </>
   );
