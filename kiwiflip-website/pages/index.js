@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 import BodyTop from "../components/Body/BodyTop";
 import BodyMiddle from "../components/Body/BodyMiddle";
 import BodySignUp from "../components/Body/BodySignUp";
+import Footer from "../components/Footer/Footer";
 import { createClient } from "contentful";
 import GlobalStyle from "../styles/globals";
 
@@ -17,7 +18,7 @@ export async function getStaticProps() {
   const bodyTopRes = await client.getEntries({ content_type: "body" });
   const bodyMiddleRes = await client.getEntries({ content_type: "bodyMiddle" });
   const bodySignUpRes = await client.getEntries({ content_type: "bodySignUp" });
-  const footerRes = await client.getEntries({ content_type: "footer" });
+  //const footerRes = await client.getEntries({ content_type: "footer" });
 
   return {
     props: {
@@ -25,7 +26,7 @@ export async function getStaticProps() {
       bodyTop: bodyTopRes.items,
       bodyMiddle: bodyMiddleRes.items,
       bodySignUp: bodySignUpRes.items,
-      footer: footerRes.items,
+      //footer: footerRes.items,
     },
   };
 }
@@ -35,7 +36,7 @@ export default function Home({
   bodyTop,
   bodyMiddle,
   bodySignUp,
-  footer,
+  //footer,
 }) {
   console.log(bodySignUp);
   return (
@@ -54,6 +55,7 @@ export default function Home({
       {bodySignUp.map((bodySignUp) => (
         <BodySignUp key={bodySignUp.sys.id} items={bodySignUp} />
       ))}
+      <Footer />
     </>
   );
 }
