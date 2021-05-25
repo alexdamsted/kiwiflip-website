@@ -81,6 +81,15 @@ export const Subtitle = styled.p`
   color: grey;
 `;
 
+export const SubHeading = styled.p`
+  max-width: 440px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #74c947;
+`;
+
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;

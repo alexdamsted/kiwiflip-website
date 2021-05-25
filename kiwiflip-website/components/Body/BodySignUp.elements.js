@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BodyContainer = styled.div`
   color: white;
-  background: #bed6ba;
+  background: #949494;
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -82,7 +82,7 @@ export const Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: grey;
+  color: #191919;
 `;
 
 export const ImgWrap = styled.div`

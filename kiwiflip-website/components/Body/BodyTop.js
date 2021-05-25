@@ -12,6 +12,7 @@ import {
   ImgWrap,
   Subtitle,
   TextWrapper,
+  SubHeading,
 } from "./BodyTop.elements";
 
 const BodyTop = ({ items }) => {
@@ -23,7 +24,9 @@ const BodyTop = ({ items }) => {
         <Col1Row>
           <Column1>
             <TextWrapper>
+              <SubHeading>Easy to list</SubHeading>
               <Heading>{bodyHeading}</Heading>
+
               <Subtitle>{bodyParagraph}</Subtitle>
             </TextWrapper>
           </Column1>

@@ -13,6 +13,7 @@ import {
   Subtitle,
   TextWrapper,
 } from "./BodyMiddle.elements";
+import { SubHeading } from "./BodyTop.elements";
 
 const BodyMiddle = ({ items }) => {
   const { heading, paragraph, image } = items.fields;
@@ -22,6 +23,7 @@ const BodyMiddle = ({ items }) => {
         <Col1Row>
           <Column1>
             <TextWrapper>
+              <SubHeading>No more expensive fees</SubHeading>
               <Heading>{heading}</Heading>
               <Subtitle>{paragraph}</Subtitle>
             </TextWrapper>

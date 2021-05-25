@@ -34,7 +34,7 @@ export const Col2Row = styled.div`
   align-items: center;
   @media screen and (max-width: 480px) {
     position: absolute;
-    margin-top: 50px;
+    margin-top: 100px;
   }
 `;
 
@@ -70,6 +70,15 @@ export const Heading = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
+`;
+
+export const SubHeading = styled.p`
+  max-width: 440px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #74c947;
 `;
 
 export const Subtitle = styled.p`
