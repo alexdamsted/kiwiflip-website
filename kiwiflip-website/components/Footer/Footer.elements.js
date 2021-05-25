@@ -125,7 +125,7 @@ export const FooterLink = styled.a`
   margin-bottom: 0.5rem;
 
   &:hover {
-    color: grey;
+    color: #74c947;
     transition: 0.3s ease-out;
   }
 `;
@@ -144,7 +144,8 @@ export const UnderFooter = styled.div`
 `;
 
 export const Logo = styled.a`
-  color: white;
+  color: #74c947;
+  font-weight: 600;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
