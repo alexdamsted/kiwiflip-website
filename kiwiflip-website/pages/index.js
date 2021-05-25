@@ -18,7 +18,7 @@ export async function getStaticProps() {
   const bodyTopRes = await client.getEntries({ content_type: "body" });
   const bodyMiddleRes = await client.getEntries({ content_type: "bodyMiddle" });
   const bodySignUpRes = await client.getEntries({ content_type: "bodySignUp" });
-  //const footerRes = await client.getEntries({ content_type: "footer" });
+  const footerRes = await client.getEntries({ content_type: "footer" });
 
   return {
     props: {
@@ -26,7 +26,7 @@ export async function getStaticProps() {
       bodyTop: bodyTopRes.items,
       bodyMiddle: bodyMiddleRes.items,
       bodySignUp: bodySignUpRes.items,
-      //footer: footerRes.items,
+      footer: footerRes.items,
     },
   };
 }
@@ -36,9 +36,9 @@ export default function Home({
   bodyTop,
   bodyMiddle,
   bodySignUp,
-  //footer,
+  footer,
 }) {
-  console.log(bodySignUp);
+  console.log(footer);
   return (
     <>
       <GlobalStyle />
@@ -55,7 +55,9 @@ export default function Home({
       {bodySignUp.map((bodySignUp) => (
         <BodySignUp key={bodySignUp.sys.id} items={bodySignUp} />
       ))}
-      <Footer />
+      {footer.map((footer) => (
+        <Footer key={footer.sys.id} items={footer} />
+      ))}
     </>
   );
 }

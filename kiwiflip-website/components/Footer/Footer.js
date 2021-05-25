@@ -18,47 +18,63 @@ import {
   WebsiteRights,
 } from "./Footer.elements";
 
-const Footer = () => {
+const Footer = ({ items }) => {
+  const {
+    footerSubscriptionTitle,
+    footerSubText,
+    footerLogoText,
+    footerAllRightReserved,
+    contact,
+    help,
+    location,
+    instagram,
+    facebook,
+    youTube,
+    aboutKiwiflip,
+    careers,
+    investors,
+  } = items.fields;
+
   return (
     <FooterContainer>
       <FooterSubscription>
-        <FooterSubHeading>Footer Subheading</FooterSubHeading>
-        <FooterSubText>You can unsubscribe at any time.</FooterSubText>
+        <FooterSubHeading>{footerSubscriptionTitle}</FooterSubHeading>
+        <FooterSubText>{footerSubText}</FooterSubText>
         <Form>
           <FormInput />
           <FooterButtonWrapper>
-            <FooterButton>Sign Up</FooterButton>
+            <FooterButton>Join</FooterButton>
           </FooterButtonWrapper>
         </Form>
       </FooterSubscription>
       <FooterLinksContainer>
         <FooterLinksWrapper>
           <FooterLinkItems>
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{contact}</FooterLink>
 
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{help}</FooterLink>
 
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{location}</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{aboutKiwiflip}</FooterLink>
 
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{careers}</FooterLink>
 
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{investors}</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{instagram}</FooterLink>
 
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{facebook}</FooterLink>
 
-            <FooterLink>Contact</FooterLink>
+            <FooterLink>{youTube}</FooterLink>
           </FooterLinkItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>
       <UnderFooter>
-        <Logo>Kiwiflip</Logo>
-        <WebsiteRights>Kiwiflip © 2021</WebsiteRights>
+        <Logo>{footerLogoText}</Logo>
+        <WebsiteRights>{footerAllRightReserved}</WebsiteRights>
       </UnderFooter>
     </FooterContainer>
   );
