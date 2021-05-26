@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GrMoney } from "react-icons/gr";
+import { FaKiwiBird } from "react-icons/fa";
 import { Container } from "../../styles/globals";
 
 export const Nav = styled.nav`
@@ -33,9 +33,9 @@ export const NavLogo = styled.a`
   align-items: center;
 `;
 
-export const NavIcon = styled(GrMoney)`
-  margin-right: 0.5rem;
-  color: #f5da42;
+export const NavIcon = styled(FaKiwiBird)`
+  margin-right: 0.8rem;
+  color: #74c947;
 `;
 
 export const NavTitle = styled.p`

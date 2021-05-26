@@ -24,9 +24,9 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo>
+          <NavIcon />
           <Link href="/" passHref>
             <NavTitle>Kiwiflip</NavTitle>
-            {/* <NavIcon /> */}
           </Link>
         </NavLogo>
         <MobileIcon onClick={handleClick}>
