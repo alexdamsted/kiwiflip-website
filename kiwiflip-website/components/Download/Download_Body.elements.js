@@ -44,13 +44,11 @@ export const Col2Row = styled.div`
 export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
-  grid-area: col1;
 `;
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
-  grid-area: col2;
 `;
 
 export const TextWrapper = styled.div`
@@ -59,7 +57,7 @@ export const TextWrapper = styled.div`
   padding-bottom: 60px;
 
   @media screen and (max-width: 768px) {
-    margin-top: -400px;
+    margin-top: 0px;
   }
 `;
 
@@ -97,8 +95,64 @@ export const ImgWrap = styled.div`
   height: 100%;
 `;
 
-export const Img = styled.img`
-  width: 100%;
-  margin: 0 0 10px 0;
-  padding-right: 0;
+export const TermsAndConditions = styled.p`
+  max-width: 440px;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 24px;
+  color: grey;
+`;
+
+export const DownloadButtonWrapper = styled.div`
+  margin: 32px 32px 32px 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+`;
+
+export const DownloadButtonAndroid = styled.button`
+  border-radius: 50px;
+  background: #a4c639;
+  white-space: nowrap;
+  padding: 20px 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s ease-in;
+    background: #9ab835;
+  }
+
+  @media screen and (max-width: 960px) {
+    padding: 12px 64px;
+    width: 100%;
+  }
+`;
+
+export const DownloadButtonIos = styled.button`
+  margin-right: 20px;
+  border-radius: 50px;
+  background: #237bd9;
+  white-space: nowrap;
+  padding: 20px 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.3s ease-in;
+    background: #1566d6;
+  }
+
+  @media screen and (max-width: 960px) {
+    padding: 12px 64px;
+    width: 100%;
+  }
 `;

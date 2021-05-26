@@ -12,6 +12,10 @@ import {
   Col2Row,
   Column2,
   ImgWrap,
+  TermsAndConditions,
+  DownloadButtonWrapper,
+  DownloadButtonIos,
+  DownloadButtonAndroid,
 } from "./Download_Body.elements";
 
 const Download_Body = ({ items }) => {
@@ -33,8 +37,14 @@ const Download_Body = ({ items }) => {
             <TextWrapper>
               <SubHeading>{subHeading}</SubHeading>
               <Heading>{heading}</Heading>
-
               <Paragraph>{paragraph}</Paragraph>
+              <DownloadButtonWrapper>
+                <DownloadButtonIos>{iPhoneButtonText}</DownloadButtonIos>
+                <DownloadButtonAndroid>
+                  {androidButtonText}
+                </DownloadButtonAndroid>
+              </DownloadButtonWrapper>
+              <TermsAndConditions>{termsAndConditions}</TermsAndConditions>
             </TextWrapper>
           </Column1>
         </Col1Row>
