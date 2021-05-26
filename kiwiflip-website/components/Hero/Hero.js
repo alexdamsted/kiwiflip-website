@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   HeroBg,
   HeroButton,
@@ -29,7 +30,9 @@ const Hero = ({ items }) => {
         <HeroH1>{heroHeading}</HeroH1>
         <HeroP>{heroParagraph}</HeroP>
         <HeroButtonWrapper>
-          <HeroButton>{heroButtonText}</HeroButton>
+          <Link href="/download" passHref>
+            <HeroButton>{heroButtonText}</HeroButton>
+          </Link>
         </HeroButtonWrapper>
       </HeroContent>
     </HeroContainer>
