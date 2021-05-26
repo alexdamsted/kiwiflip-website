@@ -112,10 +112,11 @@ export const FooterLinkItems = styled.div`
   box-sizing: border-box;
   padding: 0 50px 0 50px;
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 820px) {
     margin: 0;
     padding: 10px;
     width: 100%;
+    align-items: center;
   }
 `;
 
