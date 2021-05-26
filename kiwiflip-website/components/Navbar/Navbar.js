@@ -32,14 +32,16 @@ const Navbar = () => {
         </MobileIcon>
         <NavMenu onClick={handleClick} click={click}>
           <NavItem>
-            <Link href="/">
+            <Link href="/" passHref>
               <NavLinks>Sign Up</NavLinks>
             </Link>
           </NavItem>
           <NavItemButton>
-            <NavButtonLink>
-              <NavButton>Download App</NavButton>
-            </NavButtonLink>
+            <Link href="/download" passHref>
+              <NavButtonLink>
+                <NavButton>Download App</NavButton>
+              </NavButtonLink>
+            </Link>
           </NavItemButton>
         </NavMenu>
       </NavbarContainer>
