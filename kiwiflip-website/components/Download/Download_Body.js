@@ -1,4 +1,5 @@
 import React from "react";
+import { GrApple, GrAndroid } from "react-icons/gr";
 import Image from "next/image";
 import {
   DownloadContainer,
@@ -39,9 +40,15 @@ const Download_Body = ({ items }) => {
               <Heading>{heading}</Heading>
               <Paragraph>{paragraph}</Paragraph>
               <DownloadButtonWrapper>
-                <DownloadButtonIos>{iPhoneButtonText}</DownloadButtonIos>
+                <DownloadButtonIos>
+                  {iPhoneButtonText}
+                  &nbsp;
+                  <GrApple />
+                </DownloadButtonIos>
                 <DownloadButtonAndroid>
                   {androidButtonText}
+                  &nbsp;
+                  <GrAndroid />
                 </DownloadButtonAndroid>
               </DownloadButtonWrapper>
               <TermsAndConditions>{termsAndConditions}</TermsAndConditions>
