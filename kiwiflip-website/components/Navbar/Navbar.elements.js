@@ -55,6 +55,10 @@ export const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 380px) {
+    transform: translate(-20%, 55%);
+  }
 `;
 
 export const NavMenu = styled.ul`
