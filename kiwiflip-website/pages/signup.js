@@ -24,6 +24,9 @@ export default function SignUp({ footer }) {
   return (
     <>
       <GlobalStyle />
+      <Head>
+        <title>Sign Up</title>
+      </Head>
       <Navbar />
       <SignUp_Body />
       {footer.map((footer) => (

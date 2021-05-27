@@ -38,10 +38,12 @@ export default function Home({
   bodySignUp,
   footer,
 }) {
-  console.log(footer);
   return (
     <>
       <GlobalStyle />
+      <Head>
+        <title>Kiwiflip</title>
+      </Head>
       <Navbar />
       {hero.map((hero) => (
         <Hero key={hero.sys.id} items={hero} />

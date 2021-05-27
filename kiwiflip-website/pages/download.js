@@ -28,6 +28,9 @@ export default function Download({ downloadBody, footer }) {
   return (
     <>
       <GlobalStyle />
+      <Head>
+        <title>Download Kiwiflip</title>
+      </Head>
       <Navbar />
       {downloadBody.map((downloadBody) => (
         <Download_Body key={downloadBody.sys.id} items={downloadBody} />
