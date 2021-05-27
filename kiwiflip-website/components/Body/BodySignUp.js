@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import {
   BodyContainer,
@@ -27,7 +28,9 @@ const BodySignUp = ({ items }) => {
               <Heading>{heading}</Heading>
               <Subtitle>{paragraph}</Subtitle>
               <BodySignUpButtonWrapper>
-                <BodySignUpButton>{buttonText}</BodySignUpButton>
+                <Link href="/signup" passHref>
+                  <BodySignUpButton>{buttonText}</BodySignUpButton>
+                </Link>
               </BodySignUpButtonWrapper>
             </TextWrapper>
           </Column1>
