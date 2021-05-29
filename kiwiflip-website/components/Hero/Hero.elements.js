@@ -40,11 +40,9 @@ export const HeroContent = styled.div`
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    margin-top: -200px;
   }
 
   @media screen and (max-width: 480px) {
-    margin-top: -350px;
   }
 `;
 
