@@ -26,11 +26,11 @@ export const NavLogo = styled.a`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-
   display: flex;
   align-items: center;
+
   @media screen and (max-width: 960px) {
-    justify-items: center;
+    margin: 0 auto;
   }
 `;
 
@@ -50,11 +50,8 @@ export const MobileIcon = styled.div`
 
   @media screen and (max-width: 960px) {
     color: #191919;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 35px 35px 35px 0;
+    display: flex;
+    align-items: center;
     font-size: 1.8rem;
     cursor: pointer;
   }
