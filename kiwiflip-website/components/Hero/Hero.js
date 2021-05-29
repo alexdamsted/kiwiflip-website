@@ -22,7 +22,7 @@ const Hero = ({ items }) => {
           autoPlay
           loop
           muted
-          playsinline
+          playsInline
           src={"https:" + heroVideo.fields.file.url}
           type={heroVideo.fields.file.contentType}
         />
