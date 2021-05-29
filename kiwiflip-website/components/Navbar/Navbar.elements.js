@@ -54,13 +54,13 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 55%);
+    padding: 35px 35px 35px 0;
     font-size: 1.8rem;
     cursor: pointer;
   }
 
   @media screen and (max-width: 380px) {
-    transform: translate(-20%, 55%);
+    display: none;
   }
 `;
 
