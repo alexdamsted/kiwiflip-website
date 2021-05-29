@@ -22,6 +22,7 @@ const Hero = ({ items }) => {
           autoPlay
           loop
           muted
+          allowFullScreen
           src={"https:" + heroVideo.fields.file.url}
           type={heroVideo.fields.file.contentType}
         />
