@@ -23,23 +23,26 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavLogo = styled.a`
-  font-weight: 600;
-  color: #191919;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+
   display: flex;
   align-items: center;
+  @media screen and (max-width: 960px) {
+    justify-items: center;
+  }
 `;
 
 export const NavIcon = styled(FaKiwiBird)`
   margin-right: 0.8rem;
   color: #74c947;
+  font-size: 2rem;
 `;
 
-export const NavTitle = styled.p`
+export const NavTitle = styled.h1`
   color: #74c947;
+  font-size: 2rem;
 `;
 
 export const MobileIcon = styled.div`
