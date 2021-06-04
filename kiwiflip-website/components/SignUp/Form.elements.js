@@ -5,33 +5,8 @@ export const Container = styled.div`
   display: flex;
 `;
 
-export const Title = styled.h2`
-  font-weight: 600;
-  padding: 20px;
-
-  @media (max-width: 768px) {
-  }
-
-  @media (max-width: 480px) {
-    width: 300px;
-  }
-`;
-
-export const SubLabel = styled.label`
-  flex: none;
-  display: block;
-  font-weight: 500;
-  font-size: 0.6em;
-
-  @media (max-width: 768px) {
-    width: 300px;
-  }
-`;
-
 export const FormContainer = styled.div`
   background: #f9f9f9;
-  border: 2px solid #ededed;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   margin: auto;
@@ -55,14 +30,6 @@ export const FormGroup = styled.div`
   }
 `;
 
-export const Label = styled.label`
-  flex: none;
-  display: block;
-  width: 125px;
-  font-weight: 600;
-  font-size: 1em;
-`;
-
 export const InputControl = styled.input`
   flex: 1 1 auto;
   display: flex;
@@ -83,10 +50,10 @@ export const InputControl = styled.input`
 `;
 
 export const Button = styled.button`
-  border-radius: 3px;
+  border-radius: 30px;
   background: #74c947;
   white-space: nowrap;
-  padding: 10px 30px;
+  padding: 20px 30px;
   color: white;
   font-size: 20px;
   font-weight: 600;
