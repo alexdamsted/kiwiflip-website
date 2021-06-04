@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import SignUp_Body from "../components/SignUp/SignUp_Body";
+import Form from "../components/SignUp/Form";
 import { createClient } from "contentful";
 import GlobalStyle from "../styles/globals";
 
@@ -11,16 +11,18 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESSKEY,
   });
 
+  const formRes = await client.getEntries({ content_type: "signUpPage" });
   const footerRes = await client.getEntries({ content_type: "footer" });
 
   return {
     props: {
+      form: formRes.items,
       footer: footerRes.items,
     },
   };
 }
 
-export default function SignUp({ footer }) {
+export default function SignUp({ form, footer }) {
   return (
     <>
       <GlobalStyle />
@@ -28,7 +30,11 @@ export default function SignUp({ footer }) {
         <title>Sign Up</title>
       </Head>
       <Navbar />
-      <SignUp_Body />
+
+      {form.map((form) => (
+        <Form key={form.sys.id} items={form} />
+      ))}
+
       {footer.map((footer) => (
         <Footer key={footer.sys.id} items={footer} />
       ))}

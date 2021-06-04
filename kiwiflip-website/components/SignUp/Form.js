@@ -4,47 +4,37 @@ import {
   FormContainer,
   FormGroup,
   InputControl,
-  Label,
   Container,
-  Title,
-  SubLabel,
 } from "./Form.elements";
 
-export default class Form extends React.Component {
-  render() {
-    return (
-      <>
-        <Container>
-          <FormContainer>
-            <Title>Sign Up to Kiwiflip</Title>
-            <FormGroup>
-              <Label>First Name</Label>
-              <SubLabel>Enter your first name</SubLabel>
-              <InputControl />
-              <Label>Last Name</Label>
-              <SubLabel>Now, your last name</SubLabel>
-              <InputControl />
-            </FormGroup>
-            <FormGroup>
-              <Label>Password</Label>
-              <SubLabel>
-                Consider using a password with numbers and uppercase letters
-              </SubLabel>
-              <InputControl />
-            </FormGroup>
-            <FormGroup>
-              <Label>Username</Label>
-              <SubLabel>
-                This is your unique username that other people will see you as
-              </SubLabel>
-              <InputControl />
-            </FormGroup>
-            <FormGroup>
-              <Button>Register Account</Button>
-            </FormGroup>
-          </FormContainer>
-        </Container>
-      </>
-    );
-  }
-}
+const Form = ({ items }) => {
+  const {
+    placeholderFullName,
+    placeholderEmail,
+    placeholderPassword,
+    buttonText,
+  } = items.fields;
+
+  return (
+    <>
+      <Container>
+        <FormContainer>
+          <FormGroup>
+            <InputControl placeholder={placeholderFullName} />
+          </FormGroup>
+          <FormGroup>
+            <InputControl placeholder={placeholderEmail} />
+          </FormGroup>
+          <FormGroup>
+            <InputControl placeholder={placeholderPassword} />
+          </FormGroup>
+          <FormGroup>
+            <Button>{buttonText}</Button>
+          </FormGroup>
+        </FormContainer>
+      </Container>
+    </>
+  );
+};
+
+export default Form;
