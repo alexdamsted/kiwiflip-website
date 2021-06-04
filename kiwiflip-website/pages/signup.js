@@ -41,11 +41,10 @@ export default function SignUp({ form, image, footer }) {
         {image.map((image) => (
           <SignUpImage key={image.sys.id} items={image} />
         ))}
-
-        {footer.map((footer) => (
-          <Footer key={footer.sys.id} items={footer} />
-        ))}
       </SignUpPageContainer>
+      {footer.map((footer) => (
+        <Footer key={footer.sys.id} items={footer} />
+      ))}
     </>
   );
 }
