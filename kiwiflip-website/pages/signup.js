@@ -5,7 +5,7 @@ import Form from "../components/SignUp/Form";
 import SignUpImage from "../components/SignUp/SignUpImage";
 import { createClient } from "contentful";
 import GlobalStyle from "../styles/globals";
-import Container from "../styles/globals";
+import { SignUpPageContainer } from "../styles/signup.elements";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -33,7 +33,7 @@ export default function SignUp({ form, image, footer }) {
         <title>Sign Up</title>
       </Head>
       <Navbar />
-      <Container>
+      <SignUpPageContainer>
         {form.map((form) => (
           <Form key={form.sys.id} items={form} />
         ))}
@@ -45,7 +45,7 @@ export default function SignUp({ form, image, footer }) {
         {footer.map((footer) => (
           <Footer key={footer.sys.id} items={footer} />
         ))}
-      </Container>
+      </SignUpPageContainer>
     </>
   );
 }
