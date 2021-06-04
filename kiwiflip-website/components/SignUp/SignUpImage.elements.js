@@ -6,4 +6,7 @@ export const ImageWrap = styled.div`
   flex: 50%;
   padding-bottom: 150px;
   max-width: 450px;
+
+  @media (max-width: 1200px) {
+  }
 `;
