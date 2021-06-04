@@ -9,9 +9,7 @@ export const Container = styled.div`
 export const FormContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
+
   flex-direction: column;
   width: 600px;
 
@@ -33,7 +31,7 @@ export const FormGroup = styled.div`
 export const InputControl = styled.input`
   flex: 1 1 auto;
   display: flex;
-  width: 500px;
+  width: 600px;
   padding: 10px 25px;
   border-radius: 2px;
   margin: 10px 0 10px 0;
@@ -53,7 +51,8 @@ export const Button = styled.button`
   border-radius: 30px;
   background: #74c947;
   white-space: nowrap;
-  padding: 20px 30px;
+  padding: 15px;
+  width: 600px;
   color: white;
   font-size: 20px;
   font-weight: 600;
