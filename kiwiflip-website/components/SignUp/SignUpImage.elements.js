@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  background: #f9f9f9;
-  display: flex;
-`;
-
 export const ImageWrap = styled.div`
-  max-width: 555px;
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 50%;
+  /* max-width: 1000px;
+  height: 100%; */
 `;

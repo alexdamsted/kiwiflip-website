@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  flex: 50%;
 `;
 
 export const FormContainer = styled.div`

@@ -7,5 +7,6 @@ export const SignUpPageBackground = styled.div`
 
 export const SignUpPageContainer = styled(Container)`
   display: flex;
+  flex-wrap: wrap;
   ${Container}
 `;
