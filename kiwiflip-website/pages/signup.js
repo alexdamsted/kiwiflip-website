@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Heading from "../components/SignUp/Heading";
 import Form from "../components/SignUp/Form";
 import SignUpImage from "../components/SignUp/SignUpImage";
-import { createClient } from "contentful";
-import GlobalStyle from "../styles/globals";
+import Footer from "../components/Footer/Footer";
 import {
   SignUpPageContainer,
   SignUpPageBackground,
 } from "../styles/signup.elements";
+import GlobalStyle from "../styles/globals";
+import { createClient } from "contentful";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -21,6 +22,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      heading: signUpPageRes.items,
       form: signUpPageRes.items,
       image: signUpPageRes.items,
       footer: footerRes.items,
@@ -28,7 +30,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function SignUp({ form, image, footer }) {
+export default function SignUp({ heading, form, image, footer }) {
   return (
     <>
       <GlobalStyle />
@@ -38,6 +40,10 @@ export default function SignUp({ form, image, footer }) {
       <Navbar />
       <SignUpPageBackground>
         <SignUpPageContainer>
+          {heading.map((heading) => (
+            <Heading key={heading.sys.id} items={heading} />
+          ))}
+
           {form.map((form) => (
             <Form key={form.sys.id} items={form} />
           ))}
