@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: #f9f9f9;
   display: flex;
 `;
 
 export const FormContainer = styled.div`
-  background: #f9f9f9;
   display: flex;
   align-items: center;
   margin: auto;
