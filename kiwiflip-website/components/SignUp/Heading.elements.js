@@ -3,11 +3,15 @@ import styled from "styled-components";
 export const HeadingContainer = styled.div`
   display: flex;
   flex: 100%;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 50px 0 100px 0;
+  text-align: center;
+
+  @media screen and (max-width: 820px) {
+    font-size: 20px;
+  }
 `;
 
 export const HeadingWrap = styled.h1`

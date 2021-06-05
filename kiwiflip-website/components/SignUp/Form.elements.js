@@ -10,7 +10,11 @@ export const Container = styled.div`
 
 export const FormContainer = styled.div`
   margin-bottom: 150px;
+  @media (max-width: 1200px) {
+    padding-right: 5px;
+  }
   @media (max-width: 768px) {
+    flex: 100%;
   }
 `;
 
@@ -18,7 +22,6 @@ export const FormGroup = styled.form`
   display: flex;
 
   @media (max-width: 768px) {
-    flex-direction: column;
     width: 100%;
   }
 `;

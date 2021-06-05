@@ -11,8 +11,5 @@ export const SignUpPageContainer = styled(Container)`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 1200px) {
-  }
-
   ${Container}
 `;
