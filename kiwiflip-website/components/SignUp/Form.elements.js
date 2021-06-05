@@ -66,3 +66,12 @@ export const Button = styled.button`
     width: 100%;
   }
 `;
+
+export const ToS = styled.p`
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+`;

@@ -5,6 +5,7 @@ import {
   FormGroup,
   InputControl,
   Container,
+  ToS,
 } from "./Form.elements";
 
 const Form = ({ items }) => {
@@ -13,6 +14,7 @@ const Form = ({ items }) => {
     placeholderEmail,
     placeholderPassword,
     buttonText,
+    termsOfServiceText,
   } = items.fields;
 
   return (
@@ -31,6 +33,7 @@ const Form = ({ items }) => {
           <FormGroup>
             <Button>{buttonText}</Button>
           </FormGroup>
+          <ToS>{termsOfServiceText}</ToS>
         </FormContainer>
       </Container>
     </>
